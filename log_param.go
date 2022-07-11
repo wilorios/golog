@@ -1,4 +1,4 @@
-package log
+package golog
 
 // Log Params with key and value
 type LogParam struct {
