@@ -1,4 +1,4 @@
-module github.com/wilorios/golog
+module github.com/wilorios/golog/pkg/log
 
 go 1.18
 
