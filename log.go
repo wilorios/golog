@@ -85,7 +85,6 @@ func (l *Logger) Error(err error, msg string, args ...LogParam) {
 	err = errors.Wrap(err, "err context")
 	event := l.logger.Error()
 	eventsTypeAssertion(args, event)
-	event.Msgf(msg)
 	event.Stack().Err(err).Msgf(msg)
 }
 
@@ -94,7 +93,6 @@ func (l *Logger) Fatal(err error, msg string, args ...LogParam) {
 	err = errors.Wrap(err, "err context")
 	event := l.logger.Fatal()
 	eventsTypeAssertion(args, event)
-	event.Msgf(msg)
 	event.Stack().Err(err).Msgf(msg)
 }
 
@@ -103,7 +101,6 @@ func (l *Logger) Panic(err error, msg string, args ...LogParam) {
 	err = errors.Wrap(err, "err context")
 	event := l.logger.Panic()
 	eventsTypeAssertion(args, event)
-	event.Msgf(msg)
 	event.Stack().Err(err).Msgf(msg)
 }
 
