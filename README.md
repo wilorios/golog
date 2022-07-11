@@ -1,4 +1,4 @@
-# go-log
+# golog
 
 The golog library provides a fast and simple logger dedicated to JSON output.
 
